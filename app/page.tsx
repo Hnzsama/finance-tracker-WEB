@@ -18,8 +18,12 @@ import {
   Smartphone,
   LayoutDashboard,
 } from "lucide-react";
+import prisma from "@/lib/prisma";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const user = await prisma.user.findMany()
+  console.log(user)
+
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       {/* Header */}
