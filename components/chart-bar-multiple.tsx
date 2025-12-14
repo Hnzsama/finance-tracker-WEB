@@ -47,7 +47,7 @@ export function ChartBarMultiple() {
                 <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
-                <ChartContainer config={chartConfig} className="h-full w-full">
+                <ChartContainer config={chartConfig} className="h-[250px] w-full">
                     <BarChart accessibilityLayer data={chartData}>
                         <CartesianGrid vertical={false} />
                         <XAxis
