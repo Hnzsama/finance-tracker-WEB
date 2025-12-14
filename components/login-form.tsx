@@ -15,7 +15,8 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp"
-import { login } from "@/app/login/actions"
+import { login } from "@/app/[lang]/login/actions"
+import { useTranslation } from "@/i18n/client"
 
 export function LoginForm({
   className,
@@ -23,6 +24,7 @@ export function LoginForm({
 }: React.ComponentProps<"div">) {
   const [state, action, isPending] = useActionState(login, undefined)
   const [value, setValue] = useState("")
+  const { t } = useTranslation('common')
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -32,9 +34,9 @@ export function LoginForm({
             <div className="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
               <MessageCircle className="size-6" />
             </div>
-            <h1 className="text-2xl font-bold">Welcome Back</h1>
+            <h1 className="text-2xl font-bold">{t('login.welcome_back')}</h1>
             <p className="text-muted-foreground text-sm max-w-[280px]">
-              Enter the 6-digit access token sent to your WhatsApp number.
+              {t('login.enter_token')}
             </p>
           </div>
 
@@ -75,15 +77,15 @@ export function LoginForm({
               className="w-full"
               disabled={isPending}
             >
-              {isPending ? 'Logging in...' : 'Access Dashboard'}
+              {isPending ? t('login.logging_in') : t('login.access_dashboard')}
             </Button>
           </Field>
         </FieldGroup>
       </form>
       <div className="text-center text-sm text-muted-foreground">
-        Don&apos;t have a token? <br />
+        {t('login.no_token')} <br />
         <a href="#" className="font-medium text-primary hover:underline">
-          Chat with our WhatsApp Bot
+          {t('login.chat_with_bot')}
         </a>
       </div>
     </div>

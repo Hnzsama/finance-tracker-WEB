@@ -1,0 +1,136 @@
+{
+    "app_name": "Pelacak Keuangan",
+    "menu": {
+        "dashboard": "Dasbor",
+        "transactions": "Transaksi",
+        "analytics": "Analitik",
+        "accounts": "Akun",
+        "reports": "Laporan",
+        "settings": "Pengaturan",
+        "get_help": "Bantuan",
+        "search": "Pencarian"
+    },
+    "user": {
+        "account": "Akun",
+        "notifications": "Notifikasi",
+        "logout": "Keluar"
+    },
+    "header": {
+        "title": "Dasbor Keuangan"
+    },
+    "cards": {
+        "income": "Pemasukan",
+        "expense": "Pengeluaran",
+        "savings": "Tabungan",
+        "debt": "Hutang",
+        "income_stable": "Pemasukan bulan ini stabil",
+        "income_desc": "Total pemasukan dari semua sumber",
+        "expense_up": "Pengeluaran meningkat",
+        "expense_desc": "Total pengeluaran bulan ini",
+        "savings_consistent": "Konsisten menabung",
+        "savings_desc": "Total akumulasi tabungan",
+        "debt_paid": "Pembayaran lancar",
+        "debt_desc": "Total sisa hutang",
+        "target": "Target",
+        "remaining_months": "Sisa Bulan"
+    },
+    "charts": {
+        "pie": {
+            "title": "Distribusi Transaksi",
+            "subtitle": "Inventaris Bulan Ini",
+            "trending_up": "Naik 5.2% bulan ini",
+            "showing_total": "Menampilkan total distribusi transaksi",
+            "total_traffic": "Total Trafik"
+        },
+        "area": {
+            "title": "Arus Kas",
+            "subtitle": "Pemasukan vs Pengeluaran",
+            "subtitle_desktop": "Pemasukan vs Pengeluaran seiring waktu"
+        },
+        "bar": {
+            "title": "Ringkasan Bulanan",
+            "subtitle": "Januari - Juni 2024",
+            "income_up": "Pemasukan naik 5.2% bulan ini",
+            "showing_comparison": "Menampilkan pemasukan vs pengeluaran 6 bulan terakhir"
+        }
+    },
+    "ranges": {
+        "last_3_months": "3 Bulan Terakhir",
+        "last_30_days": "30 Hari Terakhir",
+        "last_7_days": "7 Hari Terakhir"
+    },
+    "login": {
+        "welcome_back": "Selamat Datang Kembali",
+        "enter_token": "Masukkan 6 digit token akses yang dikirim ke nomor WhatsApp Anda.",
+        "logging_in": "Masuk...",
+        "access_dashboard": "Akses Dasbor",
+        "no_token": "Tidak punya token?",
+        "chat_with_bot": "Chat dengan Bot WhatsApp kami"
+    },
+    "landing": {
+        "nav": {
+            "how_it_works": "Cara Kerja",
+            "features": "Fitur",
+            "pricing": "Harga",
+            "login": "Masuk",
+            "get_started": "Mulai"
+        },
+        "hero": {
+            "powered_by": "Didukung oleh WhatsApp",
+            "title_line_1": "Chat untuk Mencatat.",
+            "title_line_2": "Login untuk Melihat.",
+            "subtitle": "Cara termudah melacak pengeluaran. Cukup kirim pesan ke bot WhatsApp kami, dan lihat dasbor keuangan Anda yang indah di sini.",
+            "start_chatting": "Mulai Chatting",
+            "how_it_works": "Cara Kerja",
+            "whatsapp_input": "Input WhatsApp",
+            "web_dashboard": "Dasbor Web"
+        },
+        "how_it_works": {
+            "title": "Kesederhanaan adalah kecanggihan mutlak",
+            "subtitle": "Berhenti bergulat dengan aplikasi keuangan yang rumit. Gunakan aplikasi chat yang sudah Anda sukai.",
+            "step_1_title": "1. Cukup Chat",
+            "step_1_desc": "Kirim pesan seperti \"Makan siang 15rb\" atau \"Gaji 3jt\". Bot pintar kami mengerti Anda.",
+            "step_2_title": "2. Sinkronisasi Instan",
+            "step_2_desc": "Data Anda dikategorikan secara otomatis dan disinkronkan ke dasbor cloud aman Anda dalam hitungan detik.",
+            "step_3_title": "3. Lihat Wawasan",
+            "step_3_desc": "Masuk ke situs web ini untuk melihat analitik mendalam, tren bulanan, dan pertumbuhan kekayaan bersih Anda."
+        },
+        "features": {
+            "title": "Terbaik dari kedua dunia",
+            "subtitle": "Kecepatan chat dikombinasikan dengan kekuatan dasbor web penuh.",
+            "card_1_title": "Bahasa Alami",
+            "card_1_desc": "Tidak ada formulir untuk diisi. Bicaralah secara alami. \"Kopi 5rb\" adalah semua yang perlu Anda ketik.",
+            "card_1_list": {
+                "1": "Kategorisasi cerdas",
+                "2": "Mendukung berbagai mata uang",
+                "3": "Pemrosesan sadar konteks"
+            },
+            "card_2_title": "Dasbor Indah",
+            "card_2_desc": "Ketika Anda membutuhkan gambaran besar, dasbor web Anda sedang menunggu Anda.",
+            "card_2_list": {
+                "1": "Grafik interaktif",
+                "2": "Laporan yang dapat diunduh",
+                "3": "Anggaran vs Aktual"
+            },
+            "card_3_title": "Aman & Pribadi",
+            "card_3_desc": "Data keuangan Anda dienkripsi. Hanya Anda yang dapat mengakses dasbor Anda.",
+            "card_3_list": {
+                "1": "Enkripsi ujung-ke-ujung",
+                "2": "Otentikasi 2 Faktor",
+                "3": "Ekspor data Anda kapan saja"
+            }
+        },
+        "cta": {
+            "title": "Mulai melacak dalam hitungan detik",
+            "subtitle": "Hubungkan bot kami ke WhatsApp Anda dan jangan pernah melewatkan pengeluaran lagi.",
+            "button": "Dapatkan Link Bot Saya"
+        },
+        "footer": {
+            "tagline": "Chat untuk mencatat. Klik untuk melihat.",
+            "product": "Produk",
+            "company": "Perusahaan",
+            "legal": "Legal",
+            "rights": "Hak cipta dilindungi undang-undang. WhatsApp adalah merek dagang dari Meta Platforms, Inc."
+        }
+    }
+}

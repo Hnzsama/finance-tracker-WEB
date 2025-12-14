@@ -49,7 +49,13 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+import { useTranslation } from "@/i18n/client"
+
+// ... imports ...
+
 export function ChartPieDonutText() {
+    const { t } = useTranslation('common')
+
     const totalAmount = React.useMemo(() => {
         return chartData.reduce((acc, curr) => acc + curr.amount, 0)
     }, [])
@@ -57,8 +63,8 @@ export function ChartPieDonutText() {
     return (
         <Card className="flex flex-col h-full">
             <CardHeader className="items-center pb-0">
-                <CardTitle>Transaction Distribution</CardTitle>
-                <CardDescription>Current Month Inventory</CardDescription>
+                <CardTitle>{t('charts.pie.title')}</CardTitle>
+                <CardDescription>{t('charts.pie.subtitle')}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
                 <ChartContainer
@@ -104,7 +110,7 @@ export function ChartPieDonutText() {
                                                     y={(viewBox.cy || 0) + 24}
                                                     className="fill-muted-foreground"
                                                 >
-                                                    Total Traffic
+                                                    {t('charts.pie.total_traffic')}
                                                 </tspan>
                                             </text>
                                         )
@@ -117,10 +123,10 @@ export function ChartPieDonutText() {
             </CardContent>
             <CardFooter className="flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2 font-medium leading-none">
-                    Trending up by 5.2% this month
+                    {t('charts.pie.trending_up')}
                 </div>
                 <div className="leading-none text-muted-foreground">
-                    Showing total transaction distribution
+                    {t('charts.pie.showing_total')}
                 </div>
             </CardFooter>
         </Card>

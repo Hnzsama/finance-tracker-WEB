@@ -28,7 +28,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { logout } from "@/app/login/actions"
+import { logout } from "@/app/[lang]/login/actions"
+import { useTranslation } from "@/i18n/client"
 
 export function NavUser({
   user,
@@ -40,6 +41,7 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
+  const { t } = useTranslation('common')
 
   return (
     <SidebarMenu>
@@ -87,18 +89,18 @@ export function NavUser({
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <IconUserCircle />
-                Account
+                {t('user.account')}
               </DropdownMenuItem>
 
               <DropdownMenuItem>
                 <IconNotification />
-                Notifications
+                {t('user.notifications')}
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem onClick={async () => await logout()}>
               <IconLogout />
-              Log out
+              {t('user.logout')}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

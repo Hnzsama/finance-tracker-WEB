@@ -1,3 +1,5 @@
+"use client"
+
 import {
   IconTrendingDown,
   IconTrendingUp,
@@ -14,13 +16,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useTranslation } from "@/i18n/client"
 
 export function SectionCards() {
+  const { t } = useTranslation('common')
+
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Pemasukan</CardDescription>
+          <CardDescription>{t('cards.income')}</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             Rp 15.000.000
           </CardTitle>
@@ -33,16 +38,16 @@ export function SectionCards() {
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium text-green-600">
-            Pemasukan bulan ini stabil
+            {t('cards.income_stable')}
           </div>
           <div className="text-muted-foreground">
-            Total pemasukan dari semua sumber
+            {t('cards.income_desc')}
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Pengeluaran</CardDescription>
+          <CardDescription>{t('cards.expense')}</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             Rp 4.500.000
           </CardTitle>
@@ -55,53 +60,53 @@ export function SectionCards() {
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium text-red-600">
-            Pengeluaran meningkat
+            {t('cards.expense_up')}
           </div>
           <div className="text-muted-foreground">
-            Total pengeluaran bulan ini
+            {t('cards.expense_desc')}
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Tabungan</CardDescription>
+          <CardDescription>{t('cards.savings')}</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             Rp 8.000.000
           </CardTitle>
           <CardAction>
             <Badge variant="outline" className="text-blue-600 border-blue-200 bg-blue-50">
               <IconWallet className="mr-1 size-3" />
-              Target 80%
+              {t('cards.target')} 80%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Konsisten menabung
+            {t('cards.savings_consistent')}
           </div>
           <div className="text-muted-foreground">
-            Total akumulasi tabungan
+            {t('cards.savings_desc')}
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Hutang</CardDescription>
+          <CardDescription>{t('cards.debt')}</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             Rp 2.500.000
           </CardTitle>
           <CardAction>
             <Badge variant="outline" className="text-orange-600 border-orange-200 bg-orange-50">
               <IconCreditCard className="mr-1 size-3" />
-              Sisa 5 Bulan
+              {t('cards.remaining_months')} 5
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Pembayaran lancar
+            {t('cards.debt_paid')}
           </div>
-          <div className="text-muted-foreground">Total sisa hutang</div>
+          <div className="text-muted-foreground">{t('cards.debt_desc')}</div>
         </CardFooter>
       </Card>
     </div>

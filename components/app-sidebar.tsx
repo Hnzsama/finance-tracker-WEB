@@ -26,59 +26,75 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "#",
-      icon: IconDashboard,
-    },
-    {
-      title: "Transactions",
-      url: "#",
-      icon: IconListDetails,
-    },
-    {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
-    },
-    {
-      title: "Accounts",
-      url: "#",
-      icon: IconWallet,
-    },
-    {
-      title: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
-  ],
-}
+import { useTranslation } from "@/i18n/client"
+
+import {
+  Bot,
+  GalleryVerticalEnd,
+  PieChart,
+  Settings2,
+  SquareTerminal,
+} from "lucide-react"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { t, i18n } = useTranslation('common')
+  const lang = i18n.language || 'en'
+
+  const data = {
+    user: {
+      name: "shadcn",
+      email: "m@example.com",
+      avatar: "/avatars/shadcn.jpg",
+    },
+    teams: [
+      {
+        name: t('app_name'),
+        logo: GalleryVerticalEnd,
+        plan: "Enterprise",
+      },
+    ],
+    navMain: [
+      {
+        title: t('menu.dashboard'),
+        url: `/${lang}/dashboard`,
+        icon: SquareTerminal,
+        isActive: true,
+      },
+      {
+        title: t('menu.transactions'),
+        url: `/${lang}/transactions`,
+        icon: Bot,
+      },
+      {
+        title: t('menu.analytics'),
+        url: `/${lang}/analytics`,
+        icon: PieChart,
+      },
+      {
+        title: t('menu.accounts'),
+        url: `/${lang}/accounts`,
+        icon: IconWallet,
+      },
+      {
+        title: t('menu.reports'),
+        url: `/${lang}/reports`,
+        icon: IconReport,
+      },
+    ],
+    navSecondary: [
+      {
+        title: t('menu.settings'),
+        url: `/${lang}/settings`,
+        icon: Settings2,
+      },
+      {
+        title: t('menu.get_help'),
+        url: `/${lang}/help`,
+        icon: IconHelp,
+      },
+    ],
+  }
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -90,7 +106,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <IconCreditCard className="!size-5" />
-                <span className="text-base font-semibold">Finance Tracker</span>
+                <span className="text-base font-semibold">{t('app_name')}</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
