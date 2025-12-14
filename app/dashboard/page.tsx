@@ -10,6 +10,9 @@ import {
 
 import data from "./data.json"
 
+import { ChartBarMultiple } from "@/components/chart-bar-multiple"
+import { ChartPieDonutText } from "@/components/chart-pie-donut-text"
+
 export default function Page() {
   return (
     <SidebarProvider
@@ -27,10 +30,23 @@ export default function Page() {
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />
-              <div className="px-4 lg:px-6">
-                <ChartAreaInteractive />
+              <div className="grid grid-cols-1 gap-4 px-4 lg:grid-cols-3 lg:px-6">
+                <ChartPieDonutText />
+                <div className="lg:col-span-2">
+                  <ChartAreaInteractive />
+                </div>
               </div>
-              <DataTable data={data} />
+              <div className="px-4 lg:px-6">
+                <ChartBarMultiple />
+              </div>
+              <DataTable data={data as {
+                id: number;
+                amount: number;
+                type: "INCOME" | "EXPENSE" | "SAVINGS" | "DEBT";
+                description: string;
+                date: string;
+                status: string;
+              }[]} />
             </div>
           </div>
         </div>
