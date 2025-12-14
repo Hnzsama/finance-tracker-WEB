@@ -1,0 +1,136 @@
+{
+    "app_name": "Finance Tracker",
+    "menu": {
+        "dashboard": "Dashboard",
+        "transactions": "Transactions",
+        "analytics": "Analytics",
+        "accounts": "Accounts",
+        "reports": "Reports",
+        "settings": "Settings",
+        "get_help": "Get Help",
+        "search": "Search"
+    },
+    "user": {
+        "account": "Account",
+        "notifications": "Notifications",
+        "logout": "Log out"
+    },
+    "header": {
+        "title": "Finance Dashboard"
+    },
+    "cards": {
+        "income": "Income",
+        "expense": "Expense",
+        "savings": "Savings",
+        "debt": "Debt",
+        "income_stable": "Income is stable this month",
+        "income_desc": "Total income from all sources",
+        "expense_up": "Expense increased",
+        "expense_desc": "Total expense this month",
+        "savings_consistent": "Consistent savings",
+        "savings_desc": "Total accumulated savings",
+        "debt_paid": "Payments on track",
+        "debt_desc": "Total remaining debt",
+        "target": "Target",
+        "remaining_months": "months left"
+    },
+    "charts": {
+        "pie": {
+            "title": "Transaction Distribution",
+            "subtitle": "Current Month Inventory",
+            "trending_up": "Trending up by 5.2% this month",
+            "showing_total": "Showing total transaction distribution",
+            "total_traffic": "Total Traffic"
+        },
+        "area": {
+            "title": "Cash Flow",
+            "subtitle": "Income vs Expense",
+            "subtitle_desktop": "Income vs Expense over time"
+        },
+        "bar": {
+            "title": "Monthly Overview",
+            "subtitle": "January - June 2024",
+            "income_up": "Income up by 5.2% this month",
+            "showing_comparison": "Showing income vs expense for the last 6 months"
+        }
+    },
+    "ranges": {
+        "last_3_months": "Last 3 months",
+        "last_30_days": "Last 30 days",
+        "last_7_days": "Last 7 days"
+    },
+    "login": {
+        "welcome_back": "Welcome Back",
+        "enter_token": "Enter the 6-digit access token sent to your WhatsApp number.",
+        "logging_in": "Logging in...",
+        "access_dashboard": "Access Dashboard",
+        "no_token": "Don't have a token?",
+        "chat_with_bot": "Chat with our WhatsApp Bot"
+    },
+    "landing": {
+        "nav": {
+            "how_it_works": "How it Works",
+            "features": "Features",
+            "pricing": "Pricing",
+            "login": "Log in",
+            "get_started": "Get Started"
+        },
+        "hero": {
+            "powered_by": "Powered by WhatsApp",
+            "title_line_1": "Chat to Track.",
+            "title_line_2": "Login to View.",
+            "subtitle": "The easiest way to track expenses. Just send a message to our WhatsApp bot, and view your beautiful financial dashboard right here.",
+            "start_chatting": "Start Chatting",
+            "how_it_works": "How it Works",
+            "whatsapp_input": "WhatsApp Input",
+            "web_dashboard": "Web Dashboard"
+        },
+        "how_it_works": {
+            "title": "Simplicity represents ultimate sophistication",
+            "subtitle": "Stop wrestling with complex finance apps. Use the chat app you already love.",
+            "step_1_title": "1. Just Chat",
+            "step_1_desc": "Send a message like \"Spent $15 on lunch\" or \"Salary $3000\". Our smart bot understands you.",
+            "step_2_title": "2. Instant Sync",
+            "step_2_desc": "Your data is automatically categorized and synced to your secure cloud dashboard in seconds.",
+            "step_3_title": "3. View Insights",
+            "step_3_desc": "Log in to this website to see deep analytics, monthly trends, and your net worth growth."
+        },
+        "features": {
+            "title": "The best of both worlds",
+            "subtitle": "The speed of chat combined with the power of a full web dashboard.",
+            "card_1_title": "Natural Language",
+            "card_1_desc": "No forms to fill. Just talk naturally. \"Coffee 5\" is all you need to type.",
+            "card_1_list": {
+                "1": "Smart categorization",
+                "2": "Supports multiple currencies",
+                "3": "Context aware processing"
+            },
+            "card_2_title": "Beautiful Dashboard",
+            "card_2_desc": "When you need the big picture, your web dashboard is waiting for you.",
+            "card_2_list": {
+                "1": "Interactive charts",
+                "2": "Downloadable reports",
+                "3": "Budget vs Actuals"
+            },
+            "card_3_title": "Secure & Private",
+            "card_3_desc": "Your financial data is encrypted. Only you can access your dashboard.",
+            "card_3_list": {
+                "1": "End-to-end encryption",
+                "2": "2-Factor Authentication",
+                "3": "Export your data anytime"
+            }
+        },
+        "cta": {
+            "title": "Start tracking in seconds",
+            "subtitle": "Connect our bot to your WhatsApp and never miss an expense again.",
+            "button": "Get My Bot Link"
+        },
+        "footer": {
+            "tagline": "Chat to track. Click to view.",
+            "product": "Product",
+            "company": "Company",
+            "legal": "Legal",
+            "rights": "All rights reserved. WhatsApp is a trademark of Meta Platforms, Inc."
+        }
+    }
+}

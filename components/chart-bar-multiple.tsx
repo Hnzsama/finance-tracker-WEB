@@ -39,12 +39,18 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
+import { useTranslation } from "@/i18n/client"
+
+// ... imports ...
+
 export function ChartBarMultiple() {
+    const { t } = useTranslation('common')
+
     return (
         <Card className="flex flex-col h-full">
             <CardHeader>
-                <CardTitle>Monthly Overview</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+                <CardTitle>{t('charts.bar.title')}</CardTitle>
+                <CardDescription>{t('charts.bar.subtitle')}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1 pb-0">
                 <ChartContainer config={chartConfig} className="h-[250px] w-full">
@@ -68,10 +74,10 @@ export function ChartBarMultiple() {
             </CardContent>
             <CardFooter className="flex-col items-start gap-2 text-sm">
                 <div className="flex gap-2 font-medium leading-none">
-                    Income up by 5.2% this month
+                    {t('charts.bar.income_up')}
                 </div>
                 <div className="leading-none text-muted-foreground">
-                    Showing income vs expense for the last 6 months
+                    {t('charts.bar.showing_comparison')}
                 </div>
             </CardFooter>
         </Card>
